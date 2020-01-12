@@ -1,0 +1,165 @@
+.homeContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  .pinkBackground {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 1201px;
+    background: #f1b8c4;
+    opacity: 0.6;
+  }
+
+  .leftFixed {
+    position: fixed;
+    top: 0;
+    left: -120px;
+    height: 100%;
+    text-align: center;
+    text-orientation: sideways;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    transform: rotate(-90deg);
+    margin: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .leftSpan {
+      flex: 1;
+    }
+  }
+
+  .rightFixed {
+    position: fixed;
+    top: 0;
+    right: -20px;
+    height: 100%;
+    text-align: center;
+    text-orientation: sideways;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    transform: rotate(90deg);
+    margin: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .rightSpan {
+      flex: 1;
+    }
+  }
+
+  .homeImage {
+    width: 100%;
+    height: 1201px;
+  }
+
+  .firstSectionContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .spacing {
+      flex: 2;
+    }
+    .bigText {
+      flex: 1;
+      font-family: "Roboto Condensed", Arial, sans-serif;
+      color: #fff;
+      font-weight: 700;
+      font-size: 120px;
+      text-transform: uppercase;
+    }
+
+    .notSoBigTextContainer {
+      flex: 3;
+      .notSoBigText {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-family: "Roboto Condensed", Arial, sans-serif;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .smallLine {
+          border-bottom: 1px solid white;
+          width: 20px;
+          margin: 0 13px 0 10px;
+        }
+      }
+    }
+    .buttonToTrendingContainer {
+      position: absolute;
+      top: 75%;
+      left: 45.8%;
+
+      .scrollDownButton {
+        width: 50px;
+        height: 50px;
+        border-radius: 35px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .arrowDown {
+          width: 15px;
+          height: 15px;
+          border-bottom: 1px solid lightgrey;
+          border-left: 1px solid lightgrey;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .productsSection {
+    .productLabelContainer {
+      .bigLabel {
+        font-family: "Lato", Arial, sans-serif;
+        position: relative;
+        top: 85px;
+        left: 0;
+        right: 0;
+        font-size: 150px;
+        color: rgba(0, 0, 0, 0.04);
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+
+      .smallLabel {
+        font-size: 30px;
+        font-weight: 400;
+        position: relative;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", Arial, sans-serif;
+        letter-spacing: 6px;
+      }
+    }
+    .productsContainer {
+      margin-top: 100px;
+    }
+  }
+}
