@@ -4,11 +4,13 @@ import './home.scss';
 import {Button} from 'react-toolbox/lib/button';
 import ProductList from '../productList';
 import {getProducts} from './api';
+import {scroller} from 'react-scroll';
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.productsRef = null;
+        this.scroller = scroller;
         this.state = {
             productList: []
         };
@@ -24,7 +26,18 @@ class Home extends Component {
         });
     }
 
-    scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+    scrollToRef = (ref) => {
+        console.log(this.productsRef);
+        console.log(this.productsRef.current);
+        if (!ref) return null;
+
+        this.scroller.scrollTo('productsSection', {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+            offset: 50
+        });
+    };
 
     leftFixed = () => {
         return (
@@ -65,7 +78,7 @@ class Home extends Component {
                         </Button>
                     </div>
                 </div>
-                <div className="productsSection" ref={(ref) => this.productsRef = ref}>
+                <div className="productsSection" ref={(ref) => this.productsRef = ref} name="productsSection">
                     <div className="productLabelContainer">
                         <div className="bigLabel">Products</div>
                         <div className="smallLabel">our products</div>
