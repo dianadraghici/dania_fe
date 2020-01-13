@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getProducts = () => {
-    return axios("http://localhost:8080/products", {
+    return axios("http://afternoon-garden-11169.herokuapp.com/products", {
         method: 'GET',
         mode: 'no-cors',
         headers: {
